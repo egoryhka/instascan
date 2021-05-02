@@ -1,6 +1,6 @@
 {
   "name": "@vitorpamplona/instascan",
-  "version": "2.1.14",
+  "version": "3.0.0",
   "description": "Fork of Schmich's Instascan with updated libraries (Browser, iOS and Android are working)",
   "main": "dist/instascan.min.js",
   "types": "dist/instascan.d.ts",
