@@ -1,9 +1,8 @@
 # ![Instascan](https://raw.githubusercontent.com/schmich/instascan/master/assets/qr.png) Instascan
-Real-time webcam-driven HTML5 QR code scanner. [Try the live demo](https://schmich.github.io/instascan/).
+
+Fork of Schmich's Real-time webcam-driven HTML5 QR code scanner (Instascan) with updated libraries (Browser, iOS and Android are working) [Try the live demo](https://vitorpamplona.github.io/instascan/).
 
 ## Installing
-
-*Note:* Chrome requires HTTPS when using the WebRTC API. Any pages using this library should be served over HTTPS.
 
 ### NPM
 
@@ -13,11 +12,7 @@ Real-time webcam-driven HTML5 QR code scanner. [Try the live demo](https://schmi
 const Instascan = require('instascan');
 ```
 
-### Bower
-
-Pending. [Drop a note](https://github.com/schmich/instascan/issues/31) if you need Bower support.
-
-### Minified
+### Browser
 
 Copy `instascan.min.js` from the [releases](https://github.com/schmich/instascan/releases) page and load with:
 
@@ -157,46 +152,9 @@ let opts = {
 - Camera name, including manufacturer and model
 - e.g. "Microsoft LifeCam HD-3000".
 
-## Compatibility
-
-Instascan works on non-iOS platforms in [any browser that supports the WebRTC/getUserMedia API](http://caniuse.com/#feat=stream), which currently includes Chome, Firefox, Opera, and Edge. IE and Safari are not supported.
-
-Instascan does not work on iOS since Apple does not yet support WebRTC in WebKit *and* forces other browser vendors (Chrome, Firefox, Opera) to use their implementation of WebKit. [Apple is actively working on WebRTC support in WebKit](https://bugs.webkit.org/show_bug.cgi?id=124288).
-
-## Performance
-
-Many factors affect how quickly and reliably Instascan can detect QR codes.
-
-If you control creation of the QR code, consider the following:
-
-- A larger physical code is better. A 2" square code is better than a 1" square code.
-- Flat, smooth, matte surfaces are better than curved, rough, glossy surfaces.
-- Include a sufficient quiet zone, the white border surrounding QR code. The quiet zone should be at least four times the width of an individual element in your QR code.
-- A simpler code is better. You can use [this QR code generator](https://www.the-qrcode-generator.com/) to see how your input affects complexity.
-- For the same length, numeric content is simpler than ASCII content, which is simpler than Unicode content.
-- Shorter content is simpler. If you're encoding a URL, consider using a shortener such as [goo.gl](https://goo.gl/) or [bit.ly](https://bitly.com/).
-
-When scanning, consider the following:
-
-- QR code orientation doesn't matter.
-- Higher resolution video is better, but is more CPU intensive.
-- Direct, orthogonal scanning is better than scanning at an angle.
-- Blurry video greatly reduces scanner performance.
-- Auto-focus can cause lags in detection as the camera adjusts focus. Consider disabling it or using a fixed-focus camera with the subject positioned at the focal point.
-- Exposure adjustment on cameras can cause lags in detection. Consider disabling it or having a fixed white backdrop.
-
-## Example Setup
-
-- Purpose: To scan QR code stickers on paper cards and plastic bags.
-- Camera: [Microsoft LifeCam HD-3000](http://www.newegg.com/Product/Product.aspx?Item=9SIA4RE40S4991), 720p, fixed focus, around $30 USD.
-- Small support to ensure camera is focused on subject.
-- White paper backdrop to mitigate exposure adjustment.
-
-![Setup](https://raw.githubusercontent.com/schmich/instascan/master/assets/setup.jpg)
-
 ## Credits
 
-Powered by the [Emscripten JavaScript build](https://github.com/kig/zxing-cpp-emscripten) of the [C++ port](https://github.com/glassechidna/zxing-cpp) of the [ZXing Java library](https://github.com/zxing/zxing).
+Writen by Chris Schmich in 2016 and updated by several members of the community. Powered by the [Emscripten JavaScript build](https://github.com/kig/zxing-cpp-emscripten) of the [C++ port](https://github.com/glassechidna/zxing-cpp) of the [ZXing Java library](https://github.com/zxing/zxing).
 
 ## License
 
