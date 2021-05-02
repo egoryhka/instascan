@@ -8,7 +8,7 @@ var app = new Vue({
   },
   mounted: function () {
     var self = this;
-    self.scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5 });
+    self.scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false, scanPeriod: 1 });
     self.scanner.addListener('scan', function (content, image) {
       self.scans.unshift({ date: +(Date.now()), content: content });
     });
