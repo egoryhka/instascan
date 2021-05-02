@@ -6,7 +6,7 @@ Fork of Schmich's Real-time webcam-driven HTML5 QR code scanner (Instascan) with
 
 ### NPM
 
-`npm install --save instascan`
+`npm install --save @vitorpamplona/instascan`
 
 ```javascript
 const Instascan = require('instascan');
