@@ -1,6 +1,8 @@
 # ![Instascan](https://raw.githubusercontent.com/schmich/instascan/master/assets/qr.png) Instascan
 
-Fork of Schmich's Real-time webcam-driven HTML5 QR code scanner (Instascan) with updated libraries (Browser, iOS and Android are working) [Try the live demo](https://vitorpamplona.github.io/instascan/).
+Fork of Schmich's Real-time webcam-driven HTML5 QR code scanner (Instascan) with updated libraries 
+
+Desktop Browser, iOS and Android are working: [Try the live demo](https://vitorpamplona.github.io/instascan/).
 
 ## Installing
 
