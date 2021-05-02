@@ -36,8 +36,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/divoc.sdk.min.js
-          asset_name: divoc.sdk.min.js
+          asset_path: ./dist/instascan.min.js
+          asset_name: instascan.min.js
           asset_content_type: application/zip
 
   publish-npm:
@@ -49,7 +49,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+      - run: yarn install
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
